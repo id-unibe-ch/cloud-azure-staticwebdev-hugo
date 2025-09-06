@@ -8,7 +8,7 @@ tags="environment=$environment division=id subDivision=idci managedBy=azcli"
 resource_group_name=$(printf "rg-%s-%s" "$workload_name" "$environment")
 static_web_app_name=$(printf "stapp-%s-%s" "$workload_name" "$environment")
 static_web_app_sku="Free"
-repo_url=$(git remote -v | awk '/push/{gsub(/\.git$/, "", $2); print $2}')
+repo_url=$(git remote -v | awk '/origin.*push/{gsub(/\.git$/, "", $2); print $2}')
 
 if [[ "$1" == "-d" ]]; then
   echo "Cleaning up resources. This may take a few minutes."

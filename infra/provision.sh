@@ -3,7 +3,7 @@
 workload_name="hugo-static-app"
 region=westeurope
 environment="test"
-tags="environment=$environment division=id subDivision=idci managedBy=azcli"
+tags="environment=$environment division=my_div subDivision=my_ou managedBy=azcli"
 
 resource_group_name=$(printf "rg-%s-%s" "$workload_name" "$environment")
 static_web_app_name=$(printf "stapp-%s-%s" "$workload_name" "$environment")

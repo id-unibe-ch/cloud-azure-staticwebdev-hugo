@@ -6,18 +6,24 @@ Apps. It's based on the example in the
 and features everything to create a static web app and to deploy the Hugo site
 into it.
 
-Fork this repo to your account/organisation and start provisioning and deploying
-to a subscription of yours.
+This repo is a template repo. You can [create your own copy of this
+repo](https://github.com/new?template_name=cloud-azure-staticwebdev-hugo&template_owner=id-unibe-ch)
+and start provisioning and deploying to a subscription of yours.
 
 ## Prerequisites
 
-* An fork of this repo on GitHub, where you have full access to it
+* A copy of this repo on GitHub, where you have full access to it
 * An Azure subscription with permission to create resources
 * The tools `git` and `az` (Azure CLI) installed on your machine
 
 ## Setup
 
-Clone your fork to your local machine and run the provisioning script. You have
+Clone your copy to your local machine and adjust the variables in the
+provisioning script. Choose a meaningful workload name for your use case, adjust
+the environment and set tags according your [tagging
+strategy](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
+
+Now run the provisioning script. You have
 to be logged in to the Azure CLI and have selected the right subscription.
 Follow the onscreen instructions.
 

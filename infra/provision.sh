@@ -10,6 +10,12 @@ static_web_app_name=$(printf "stapp-%s-%s" "$workload_name" "$environment")
 static_web_app_sku="Free"
 repo_url=$(git remote -v | awk '/push/{gsub(/\.git$/, "", $2); print $2}')
 
+if [[ "$1" == "-d" ]]; then
+  echo "Cleaning up resources. This may take a few minutes."
+  az group delete --name "$resource_group_name"
+  exit 0
+fi
+
 az group create \
   --name "$resource_group_name" \
   --location $region \
